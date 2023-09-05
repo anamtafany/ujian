@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  width: 80%;
+  background-color: aliceblue;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  background-color: brown;
+  color: white;
+}
+
+img {
+  height: 30px;
+
+}
+
+.navigasi {
+  display: block;
+}
+
+.navigasi ul{
+  text-decoration: none;
+}

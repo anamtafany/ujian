@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 20px;
+}
+
+.container {
+    
+    margin: 0 auto;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    height: 76px;
+    align-items: center;
+    background-color: rgb(215, 67, 4);
+    box-shadow: 0px 0px 5px rgba(85, 85, 85, 0.688);
+    /* padding: 0 25px; */
+}
+
+.home a{
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+
+}
+
+.navigasi {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+}
+
+.navigasi ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+
+.lis-nav .list-menu a{
+    color: rgb(231, 243, 17);
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px;
+    
+}
+
+/* 
+input {
+    display: none;
+}
+
+label {
+    z-index: 2;
+    position: absolute;
+    top: 30px; right: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+label span {
+    display: block;
+    height: 3px;
+    width: 30px;
+    background-color: aliceblue;
+    margin: 5px 0;
+    transition: .3s;
+
+} */
+
+
+
+/* section */
+
+
+
+
+.judul-utama {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'img-utama img-utama'
+    'bghadis bghadis'
+    'icon icon';
+    background-color: aliceblue;
+    padding-top: 150px;
+    align-content: center;
+}
+
+
+.bghadis {
+    display: grid;
+    grid-area: bghadis;
+    text-align: center;
+    
+
+}
+
+#hadis {
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(127, 43, 13);
+}
+
+#terjemah {
+    font-size: 16px;
+    color: rgb(21, 21, 21);
+    margin: 15px 0;
+}
+
+#judul {
+    color: chocolate;
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+.button {
+    padding: 20px 50px;
+    background-color: rgb(127, 43, 13);
+    border-radius: 50px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 2px 5px 5px rgba(85, 85, 85, 0.688);
+    margin: 20px 0;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+.img-utama {
+    display: grid;
+    grid-area: img-utama;
+    justify-content: center;
+    
+
+}
+
+.img-utama img {
+    height: 300px;
+    display: flex;
+    filter: drop-shadow(0px 90px 50px rgba(66, 66, 66, 0.559));
+    animation: move-1 6s linear infinite;
+}
+
+@keyframes move-1 {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-10%); }
+  100% { transform: translateX(0); }
+}
+
+/* icon */
+
+.icon {
+    padding: 100px 0 20px;
+    display: block;
+    grid-area: icon;
+    text-align: center;
+    
+}
+
+.icon p {
+    color: chocolate;
+    cursor: pointer;
+}
+
+
+.icon a {
+    color: rgb(193, 67, 0);
+    font-size: 35px;
+    margin: 0 10px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.icon a:hover {
+    color: crimson;
+    cursor: pointer;
+}
+
+/* responsive */
+
+@media screen and (min-width: 600px){
+    .judul-utama {
+        grid-template-areas: 
+        'img-utama bghadis'
+        'icon icon';
+    }
+
+    .bghadis {
+        display: grid;
+        grid-area: bghadis;
+        text-align: right;
+        width: 70%;
+}
+
+
+
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+    }
+    nav li {
+      text-align: center;
+    }
+    h3 ul {
+      flex-direction: column;
+    }
+    h3 li {
+      text-align: center;
+    }
+  }
+
+
+
+
+
+
+
+/* ASIDE */
+
+aside {
+    background-color: rgb(250, 203, 63);
+}
+
+.card-aside {
+    padding: 40px 0 50px;
+    text-align: center;
+}
+
+.card-aside img {
+    height: 200px;
+    border-radius: 50%;
+    filter: drop-shadow(0px 25px 20px rgba(66, 66, 66, 0.262));
+    animation: move-2 4s linear infinite;
+}
+
+@keyframes move-2 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10%); }
+    100% { transform: translateY(0); }
+  }
+
+
+.card-aside h5 {
+    color: rgb(130, 55, 2);
+    padding-bottom: 50px;
+    font-size: 20px;
+    
+}
+
+
+.card-aside figcaption {
+    font-size: 20px;
+    padding: 10px 0;
+    color: rgb(130, 55, 2);
+    
+}
+
+
+
+
+
+
+/* Konten */
+
+
+.container-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+
+.judul {
+    text-align: center;
+    color: chocolate;
+    margin-top: 80px;
+    font-size: 300%;
+}
+
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #333; */
+    color: rgb(151, 56, 0);
+    margin-bottom: 80px;
+  }
+  
+  h3 ul {
+    display: flex;
+    list-style: none;
+    
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  h3 li {
+    display: block;
+    padding: 1em;
+    
+  }
+  
+  h3 a {
+    color: rgb(151, 56, 0);
+    text-decoration: none;
+    text-align: center;
+  }
+
+
+
+
+
+
+.card {
+    width: 350px;
+    height: auto;
+    /* float: left; */
+    border: 2px rgb(239, 160, 131) solid;
+    /* background-color: rgb(254, 243, 234); */
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    
+}
+.card img {
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+
+
+
+/* readmore */
+
+p {
+    line-height: 18px;
+    max-height: calc(18px * 0);
+    overflow: hidden;
+}
+
+.button-readmore::after {
+content: Read more;
+}
+
+.button-readmore {
+    padding: 5px 10px;
+    background-color: rgb(193, 89, 48);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button-readmore:hover {
+    background-color: brown;
+}
+
+#check-readmore:checked ~ .button-readmore::after {
+content: 'Read less';
+}
+
+#check-readmore:checked ~ p {
+    max-height: 100vh;
+}
+
+#check-readmore:checked ~ .card {
+    max-height: 100vh;
+}
+
+/* hide  inpu checkbox */
+
+#check-readmore {
+    position: absolute;
+    top: -100px;
+}
+
+
+
+/* footer */
+
+footer {
+    text-align: center;
+    line-height: 50px;
+    color: aliceblue;
+    height: 50px;
+    background-color: rgb(154, 46, 7);
+    margin-top: 10px;
+}
+
+
+
